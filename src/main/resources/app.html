@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IQE %version</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            margin: 40px;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #2a5db0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px #aaa;
+        }
+        hr {
+            width: 60%;
+            margin: 20px auto;
+            border: 1px solid #2a5db0;
+        }
+        p {
+            max-width: 800px;
+            margin: 15px auto;
+            line-height: 1.6;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #2a5db0;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e6f0fa;
+        }
+        .footer {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 40px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+        .highlight {
+            color: #d9534f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Internet Query Engine %version</h1>
+    <hr>
+    <p>Welcome to <span class="highlight">IQE</span>! This page gives you the lowdown on how to tweak and tune your server with some nifty command-line options.</p>
+    
+    <h2>Command-Line Options</h2>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Short Form</th>
+            <th>Description</th>
+            <th>Current Value</th>
+        </tr>
+        <tr>
+            <td>--port</td>
+            <td>-p</td>
+            <td>Port number to run the server on (0-65535)</td>
+            <td>%port</td>
+        </tr>
+        <tr>
+            <td>--backlog</td>
+            <td>-b</td>
+            <td>Max pending connections (0 = system default)</td>
+            <td>%backlog</td>
+        </tr>
+        <tr>
+            <td>--threads</td>
+            <td>-t</td>
+            <td>Number of threads in the pool (0 = synchronous)</td>
+            <td>%threads</td>
+        </tr>
+        <tr>
+            <td>--debug</td>
+            <td>-d</td>
+            <td>Enable debug mode (true/false)</td>
+            <td>%debug</td>
+        </tr>
+    </table>
+
+    <p>Try running the server with different options, like <code>java -jar iqe-%version.jar -p 8080 -t 10 -d</code>, and watch this page update!</p>
+
+    <div class="footer">
+        <p>Powered by IQE.</p>
+    </div>
+</body>
+</html>
