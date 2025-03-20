@@ -21,6 +21,35 @@ Challenges to address:
 
 ---
 
+Command-Line Arguments:
+
+| Option | Long Option | Description |
+|--------|------------|-------------|
+| `-p`   | `--port`   | Specifies the port number for the server (0-65535). Default: 8641. |
+| `-b`   | `--backlog` | Sets the maximum number of pending connections. Default: 0. |
+| `-t`   | `--threads` | Defines the number of threads in the thread pool. Must be non-negative. Default: 0. |
+| `-d`   | `--debug`   | Enables debug mode, printing configuration details. |
+| `-ng`  | `--noget`   | Disables the GET method in the application. |
+
+Running the Application:
+To start the application with default settings, use:
+```sh
+java -jar iqe-0.0.0.jar
+```
+
+To specify custom configurations, pass the desired options:
+```sh
+java -jar iqe-0.0.0.jar -p 8080 -b 50 -t 10 -d
+```
+
+This example:
+- Runs the server on port `8080`
+- Sets a backlog limit of `50`
+- Allocates `10` threads for the thread pool
+- Enables debug mode
+
+---
+
 Examples:
 ```
 SELECT dns.ns, meta.title FROM example.com;
